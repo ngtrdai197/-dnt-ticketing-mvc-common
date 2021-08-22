@@ -1,5 +1,3 @@
-import { ValidationError } from "express-validator";
-
 export interface IError {
   message: string;
   field?: string;
@@ -19,3 +17,10 @@ export abstract class CustomError extends Error implements ICustomError {
     Object.setPrototypeOf(this, CustomError.prototype);
   }
 }
+
+export * from "./database.error";
+export * from "./bad-request.error";
+export * from "./conflict-request.error";
+export * from "./not-found.error";
+export * from "./request-validation.error";
+export * from "./unauthorization.error";
