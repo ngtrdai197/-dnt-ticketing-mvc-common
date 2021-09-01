@@ -29,9 +29,6 @@
     "url": "https://github.com:ngtrdai197/-dnt-ticketing-mvc-common.git"
   },
   "homepage": "https://github.com/ngtrdai197/-dnt-ticketing-mvc-common",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "del-cli": "^4.0.1",
