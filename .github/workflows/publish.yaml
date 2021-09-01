@@ -15,8 +15,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install
       - run:
-          git config user.email "ngtrdai290197@gmail.com"
-          git config user.name "Dai Nguyen"
+          git config --global user.email "ngtrdai290197@gmail.com"
+          git config --global user.name "Dai Nguyen"
 
       - run: npm run pub
         env:
