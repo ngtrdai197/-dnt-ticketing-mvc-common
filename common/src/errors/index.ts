@@ -23,4 +23,6 @@ export * from "./bad-request.error";
 export * from "./conflict-request.error";
 export * from "./not-found.error";
 export * from "./request-validation.error";
-export * from "./unauthorization.error";
+export * from "./not-authorization.error";
+export * from "./un-authenticated.error";
+export * from "./forbidden.error";
