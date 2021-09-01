@@ -1,6 +1,6 @@
 {
   "name": "@dnt-ticketing-mvc/common",
-  "version": "1.0.7",
+  "version": "1.0.0",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -15,6 +15,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:ngtrdai197/-dnt-ticketing-mvc-common.git"
+  },
+  "homepage": "https://github.com/ngtrdai197/-dnt-ticketing-mvc-common",
   "devDependencies": {
     "@types/express": "^4.17.13",
     "del-cli": "^4.0.1",
