@@ -17,8 +17,9 @@ jobs:
         with:
           node-version: "10.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm install
+      # Patch version
+      - run: npm version patch
       # Publish to npm
-      - run: npm pub --access public
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

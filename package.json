@@ -12,8 +12,17 @@
     "build": "npm run clean && tsc",
     "pub": "git add . && git commit -m \"Updates\" && npm run build && npm version patch && npm publish"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "npm",
+    "publish",
+    "package",
+    "registry"
+  ],
+  "author": {
+    "name": "Dai Nguyen",
+    "email": "nguyendai.coder@gmail.com",
+    "url": "https://nguyendai.dev"
+},
   "license": "ISC",
   "repository": {
     "type": "git",
