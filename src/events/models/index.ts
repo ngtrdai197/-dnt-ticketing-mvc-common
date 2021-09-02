@@ -1,1 +1,1 @@
-export * from "./ticket-created-event.model";
+export * from "./ticket-event.model";

@@ -3,3 +3,4 @@ export interface ITicketCreated {
   title: string;
   price: number;
 }
+export interface ITicketUpdated extends ITicketCreated {}
