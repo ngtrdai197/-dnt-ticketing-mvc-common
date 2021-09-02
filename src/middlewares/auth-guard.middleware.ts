@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import * as jwt from "jsonwebtoken";
-import { NotFoundError } from "../errors";
+import { UnAuthenticatedError } from "../errors";
 
 interface IUserPayload {
   id: string;
@@ -22,7 +22,7 @@ export const authGuardMiddleware = async (
 ) => {
   const authToken = req.headers.authorization;
   if (!authToken) {
-    throw new NotFoundError();
+    throw new UnAuthenticatedError("Missing token");
   }
   try {
     const token = authToken.split(" ")[1];
@@ -32,7 +32,7 @@ export const authGuardMiddleware = async (
     )) as IUserPayload;
     req.currentUser = decoded;
   } catch (error) {
-    throw new NotFoundError("Verify your token is failed.");
+    throw new UnAuthenticatedError("Verify your token is failed.");
   }
   next();
 };
