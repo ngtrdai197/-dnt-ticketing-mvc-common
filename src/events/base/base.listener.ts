@@ -1,4 +1,5 @@
 import { Message, Stan, SubscriptionOptions } from "node-nats-streaming";
+import { QUEUE_GROUP_NAME } from "../enums/queue-group.enum";
 import { Subjects } from "../enums/subjects.enum";
 
 export interface IListenerEvent {
@@ -8,7 +9,7 @@ export interface IListenerEvent {
 
 export abstract class Listener<T extends IListenerEvent, TData> {
   abstract subject: T["subject"];
-  abstract queueGroupName: string;
+  abstract queueGroupName: QUEUE_GROUP_NAME;
   abstract onMessage(data: TData, msg: Message): void;
   private client: Stan;
   protected ackWait = 5 * 1000;

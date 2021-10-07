@@ -1,5 +1,6 @@
 import { Message } from "node-nats-streaming";
 import { Listener } from "../base/base.listener";
+import { QUEUE_GROUP_NAME } from "../enums/queue-group.enum";
 import { Subjects } from "../enums/subjects.enum";
 import { ITicketUpdated } from "../interfaces/ticket.interface";
 import { TicketUpdatedEvent } from "../models/ticket-event.model";
@@ -9,7 +10,7 @@ export class TicketUpdatedListener extends Listener<
   ITicketUpdated
 > {
   public readonly subject = Subjects.TicketUpdated;
-  public readonly queueGroupName = "tickets-service";
+  public readonly queueGroupName = QUEUE_GROUP_NAME.GROUP_TICKETS;
 
   public onMessage(data: ITicketUpdated, msg: Message) {
     console.log("Event data!", data);
