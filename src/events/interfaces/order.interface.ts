@@ -12,3 +12,11 @@ export interface IOrderCreated {
   };
 }
 export interface IOrderUpdated extends IOrderCreated {}
+
+export interface IOrderCancelled {
+  id: string;
+  version: number;
+  ticket: {
+    id: string;
+  };
+}

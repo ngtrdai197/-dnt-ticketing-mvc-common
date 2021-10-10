@@ -11,11 +11,11 @@ export abstract class Listener<T extends IListenerEvent, TData> {
   abstract subject: T["subject"];
   abstract queueGroupName: QUEUE_GROUP_NAME;
   abstract onMessage(data: TData, msg: Message): void;
-  private client: Stan;
+  protected client: Stan;
   protected ackWait = 5 * 1000;
 
-  constructor(client: Stan) {
-    this.client = client;
+  constructor(protected _client: Stan) {
+    this.client = _client;
   }
 
   public listen(): void {

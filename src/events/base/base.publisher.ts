@@ -8,10 +8,10 @@ export interface IPublisherEvent {
 
 export abstract class Publisher<T extends IPublisherEvent, TData> {
   abstract subject: T["subject"];
-  private client: Stan;
+  protected client: Stan;
 
-  constructor(client: Stan) {
-    this.client = client;
+  constructor(protected _client: Stan) {
+    this.client = _client;
   }
 
   publish(data: TData): Promise<void> {

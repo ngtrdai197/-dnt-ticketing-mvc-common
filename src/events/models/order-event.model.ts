@@ -10,3 +10,8 @@ export class OrderUpdatedEvent implements IListenerEvent {
   subject!: Subjects.OrderUpdated;
   data!: IOrderUpdated;
 }
+
+export class OrderCancelledEvent {
+  subject!: Subjects.OrderCancelled;
+  data!: IOrderUpdated;
+}
