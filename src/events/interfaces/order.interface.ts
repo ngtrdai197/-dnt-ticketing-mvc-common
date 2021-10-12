@@ -22,6 +22,6 @@ export interface IOrderCancelled {
   };
 }
 
-export interface IOrderPaidSuccess {
+export interface IOrderPaidSucceed {
   orderId: string;
 }

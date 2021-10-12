@@ -5,7 +5,7 @@ export const enum Subjects {
   OrderCreated = "order:created",
   OrderUpdated = "order:updated",
   OrderCancelled = "order:cancelled",
-  OrderPaidSuccessful = "order:paid:successful",
+  OrderPaidSucceed = "order:paid:succeed",
 
   ExpirationComplete = "expiration:complete",
 }

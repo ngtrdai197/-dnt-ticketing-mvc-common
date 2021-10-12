@@ -1,6 +1,6 @@
 import { Subjects } from "../enums";
 import { IListenerEvent } from "../base";
-import { IOrderCreated, IOrderPaidSuccess, IOrderUpdated } from "../interfaces";
+import { IOrderCreated, IOrderPaidSucceed, IOrderUpdated } from "../interfaces";
 
 export class OrderCreatedEvent implements IListenerEvent {
   subject!: Subjects.OrderCreated;
@@ -17,7 +17,7 @@ export class OrderCancelledEvent {
   data!: IOrderUpdated;
 }
 
-export class OrderPaidSuccessfulEvent implements IListenerEvent {
-  subject!: Subjects.OrderPaidSuccessful;
-  data!: IOrderPaidSuccess;
+export class OrderPaidSucceedEvent implements IListenerEvent {
+  subject!: Subjects.OrderPaidSucceed;
+  data!: IOrderPaidSucceed;
 }
