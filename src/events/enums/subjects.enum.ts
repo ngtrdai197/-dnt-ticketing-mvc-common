@@ -8,4 +8,6 @@ export const enum Subjects {
   OrderPaidSucceed = "order:paid:succeed",
 
   ExpirationComplete = "expiration:complete",
+
+  PaymentComplete = "payment:complete",
 }
