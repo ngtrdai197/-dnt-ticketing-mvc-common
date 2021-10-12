@@ -1,5 +1,5 @@
 import { Stan } from "node-nats-streaming";
-import { Subjects } from "../enums/subjects.enum";
+import { Subjects } from "../enums";
 
 export interface IPublisherEvent {
   subject: Subjects;
@@ -7,10 +7,10 @@ export interface IPublisherEvent {
 }
 
 export abstract class Publisher<T extends IPublisherEvent, TData> {
-  abstract subject: T["subject"];
+  abstract subject: Subjects;
   protected client: Stan;
 
-  constructor(protected _client: Stan) {
+  protected constructor(protected _client: Stan) {
     this.client = _client;
   }
 
