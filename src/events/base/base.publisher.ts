@@ -10,7 +10,7 @@ export abstract class Publisher<T extends IPublisherEvent, TData> {
   abstract subject: Subjects;
   protected client: Stan;
 
-  protected constructor(protected _client: Stan) {
+  public constructor(protected _client: Stan) {
     this.client = _client;
   }
 
