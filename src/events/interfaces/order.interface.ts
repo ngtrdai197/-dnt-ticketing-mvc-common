@@ -11,6 +11,7 @@ export interface IOrderCreated {
     price: number;
   };
 }
+
 export interface IOrderUpdated extends IOrderCreated {}
 
 export interface IOrderCancelled {
@@ -19,4 +20,8 @@ export interface IOrderCancelled {
   ticket: {
     id: string;
   };
+}
+
+export interface IOrderPaidSuccess {
+  orderId: string;
 }
